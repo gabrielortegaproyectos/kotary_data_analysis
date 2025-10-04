@@ -2,3 +2,10 @@
 #
 # Documentation for this file format can be found in "The Data Catalog"
 # Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+raw_mineria_data:
+  type: kedro_datasets.pandas.ExcelDataset
+  filepath: data/01_raw/20250728 DATOS MINERIA.xlsx
+  load_args:
+    sheet_name: null  # null carga todas las hojas como un diccionario
+    engine: openpyxl
