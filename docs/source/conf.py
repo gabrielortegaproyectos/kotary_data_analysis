@@ -101,6 +101,9 @@ pygments_style = "sphinx"
 
 # -- Options for HTML output -------------------------------------------------
 
+# URL base para GitHub Pages
+html_baseurl = "https://gabrielortegaproyectos.github.io/kotary_data_analysis/"
+
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
