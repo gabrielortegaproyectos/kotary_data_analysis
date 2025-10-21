@@ -7,4 +7,3 @@ sphinx-copybutton>=0.5.2
 myst-parser>=2.0.0
 Jinja2<3.2.0
 docutils<0.21
-ipykernel>=5.3,<7.0
