@@ -22,10 +22,12 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
 
+      - name: Install uv
+        run: pip install uv
+
       - name: Build Sphinx documentation
         run: |
-          cd docs
-          make html
+          uv run sphinx-build -b html docs/source docs/build/html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
