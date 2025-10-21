@@ -2,13 +2,35 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to project kotari_gender_data_analysis's API docs!
-=============================================
+Welcome to project kotari_gender_data_analysis's documentation!
+================================================================
+
+Análisis de Datos de Género en el Sector Minero
+------------------------------------------------
+
+Este proyecto tiene como objetivo analizar datos del sector minero con enfoque en aspectos de género,
+identificando patrones, brechas y oportunidades de mejora en la participación y equidad de género.
+
+Contenidos
+----------
 
 .. toctree::
-   :maxdepth: 4
+   :maxdepth: 2
+   :caption: Análisis de Datos
 
-   modules
+   note_00_EDA_Sheet1
+   note_01_EDA_Sheet2
+   page_00_kothari_index
+   page_01_kothari_paper_section
+   page_02_kothari_new_paper_section
+
+.. comment: La documentación de API se generará automáticamente
+.. 
+   .. toctree::
+      :maxdepth: 4
+      :caption: Documentación de API
+
+      modules
 
 
 Indices and tables

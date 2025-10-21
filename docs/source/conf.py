@@ -39,20 +39,35 @@ version = re.match(r"^([0-9]+\.[0-9]+).*", release).group(1)
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "myst_parser",          # MyST Markdown
+    "sphinx.ext.mathjax",   # Render con MathJax (HTML)
     "sphinx.ext.autodoc",
     "sphinx.ext.napoleon",
     "sphinx_autodoc_typehints",
     "sphinx.ext.doctest",
     "sphinx.ext.todo",
     "sphinx.ext.coverage",
-    "sphinx.ext.mathjax",
     "sphinx.ext.ifconfig",
     "sphinx.ext.viewcode",
-    "sphinx.ext.mathjax",
     "nbsphinx",
-    "myst_parser",
     "sphinx_copybutton",
 ]
+
+myst_enable_extensions = [
+    "dollarmath",  # habilita $...$ (inline) y $$...$$ (display)
+    "amsmath",     # soporta entornos amsmath y numeración
+]
+
+math_number_all = True
+
+mathjax3_config = {
+    "tex": {
+        "tags": "ams",
+        "macros": {
+            "\\E": "\\mathbb{E}",
+        },
+    }
+}
 
 # enable autosummary plugin (table of contents for modules/classes/class
 # methods)
