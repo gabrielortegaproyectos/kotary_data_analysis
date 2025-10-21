@@ -1,0 +1,10 @@
+# Requisitos para compilar la documentación Sphinx
+sphinx>=7.2.6
+sphinx-rtd-theme>=2.0.0
+nbsphinx>=0.8.1
+sphinx-autodoc-typehints>=1.20.2
+sphinx-copybutton>=0.5.2
+myst-parser>=2.0.0
+Jinja2<3.2.0
+docutils<0.21
+ipykernel>=5.3,<7.0
