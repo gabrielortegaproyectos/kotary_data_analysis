@@ -1,4 +1,4 @@
-# Versión actual de la escritura
+# Vieja versión: Párrafo metodología - Kotari
 
 ## ¿Qué es el modelo de Kothari?
 El modelo de Kothari, Leonel y Wesley (2005) es una mejora de los modelos de devengos discrecionales (como el de Jones o Jones modificado) y se utiliza ampliamente para estudiar manipulación de resultados contables o earnings management. Su objetivo principal es estimar los devengos discrecionales con mayor precisión, controlando por el desempeño económico de la empresa. Se adjunta paper original del autor.
