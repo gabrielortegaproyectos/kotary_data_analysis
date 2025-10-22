@@ -21,8 +21,9 @@ Contenidos
    note_00_EDA_Sheet1
    note_01_EDA_Sheet2
    page_00_kothari_index
-   page_01_kothari_paper_section
-   page_02_kothari_new_paper_section
+   page_01_new_intro
+   page_02_old_method
+   page_03_new_method
 
 .. comment: La documentación de API se generará automáticamente
 .. 
