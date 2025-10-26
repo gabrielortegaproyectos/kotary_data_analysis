@@ -28,7 +28,7 @@ Con el objetivo de detectar posibles prácticas de manipulación de resultados c
 Este modelo permite estimar los devengos, ajustando por el desempeño financiero de la empresa, y obtener así una medida más precisa de los devengos discrecionales. La especificación del modelo es la siguiente:
 
 $$
-TA_{i,t}/A_{i,t-1} = \alpha_0 + \alpha_1(1/A_{i,t-1}) + \alpha_2((\Delta REV_{i,t} - \Delta REC_{i,t})/A_{i,t-1}) + \alpha_3(PPE_{i,t}/A_{i,t-1}) + \alpha_4 ROA_{i,t} + \varepsilon_{i,t}
+\frac{TA_{i,t}}{A_{i,t-1}} = \alpha_0 + \alpha_1(\frac{1}{A_{i,t-1}}) + \alpha_2(\frac{(\Delta REV_{i,t} - \Delta REC_{i,t})}{A_{i,t-1}}) + \alpha_3(\frac{PPE_{i,t}}{A_{i,t-1}}) + \alpha_4 ROA_{i,t} + \varepsilon_{i,t}
 $$
 
 Donde:
