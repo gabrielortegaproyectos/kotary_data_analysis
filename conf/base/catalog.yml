@@ -9,3 +9,21 @@ raw_mineria_data:
   load_args:
     sheet_name: null  # null carga todas las hojas como un diccionario
     engine: openpyxl
+
+filtered_kothari_data:
+  type: pandas.ParquetDataset
+  filepath: data/04_feature/filtered_kothari_data.parquet
+  save_args:
+    compression: 'snappy'
+
+kothari_results:
+  type: pandas.ParquetDataset
+  filepath: data/07_model_output/kothari_results.parquet
+  save_args:
+    compression: 'snappy'
+
+kothari_analysis_data:
+  type: pandas.ParquetDataset
+  filepath: data/07_model_output/kothari_analysis_data.parquet
+  save_args:
+    compression: 'snappy'
