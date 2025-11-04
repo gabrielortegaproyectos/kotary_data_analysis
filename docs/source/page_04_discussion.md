@@ -1,6 +1,6 @@
-# Nueva versión: Párrafo introducción - Kotari
+# Versión actual de la Discusión
 
->> Esta es la version actualizada de la introducción
+>> *Esta es la versión actualizada de la Discusión el 04 de noviembre.*
 
 ## Párrafos para la Introducción
 
