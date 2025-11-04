@@ -161,3 +161,10 @@ venv.bak/
 # mlflow local runs
 mlruns/*
 uv.lock
+docs/source/correlation_matrix.png
+docs/source/kothari_by_company.png
+docs/source/kothari_diagnostic_plots.png
+docs/source/weight_categories_boxplot.png
+.gitignore
+docs/source/kothari_by_year.png
+docs/source/weight_vs_kothari_scatter.png
