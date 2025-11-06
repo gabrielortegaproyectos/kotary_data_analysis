@@ -168,3 +168,4 @@ docs/source/weight_categories_boxplot.png
 .gitignore
 docs/source/kothari_by_year.png
 docs/source/weight_vs_kothari_scatter.png
+.github/instructions/writting_format.instructions.md
