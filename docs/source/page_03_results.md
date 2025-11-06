@@ -2,7 +2,14 @@
 
 >> *Esta es la versión actualizada de los Resultados el 04 de noviembre.*
 
-## Párrafos para la Introducción
+## 3. Resultados
 
-resultadso
+En la etapa descriptiva, las **correlaciones de Pearson** entre el índice de Kothari y las variables de interés no muestran asociaciones lineales significativas con la participación de mujeres ni en directorios ni en ejecutivos. La **correlación de Spearman** evidencia una relación negativa y estadísticamente significativa entre **peso de empresa** y el índice de Kothari (\rho\approx -0{,}187), (p\approx 0{,}019), consistente con un vínculo monótono donde firmas de mayor peso registran, en promedio, devengos discrecionales más bajos en esta medida. Las variables de género no presentan asociaciones monótonas significativas con el índice en este contraste no paramétrico.
 
+La exploración de no linealidades agrupa **peso de empresa**, **participación femenina en directorios** y **participación femenina en ejecutivos** en tres categorías de igual tamaño. El **ANOVA** no detecta diferencias de medias del índice de Kothari entre terciles para ninguna de las tres variables, lo que sugiere que, bajo esta partición, no hay evidencia de efectos por tramos.
+
+Los **VIF** se mantienen bajos para todos los predictores, con valores alrededor de 1,07 para peso de empresa y levemente superiores a 2 para las variables de género, lo que descarta problemas relevantes de multicolinealidad e indica que los coeficientes pueden interpretarse con estabilidad numérica.
+
+En la **regresión múltiple**, el **modelo base** con sólo peso de empresa explica una fracción pequeña de la variación del índice ((R^2\approx 0{,}013)). Al incorporar **participación de mujeres en directorios**, el ajuste no mejora de forma apreciable y los coeficientes asociados no resultan significativos. Al incorporar **participación de mujeres en ejecutivos**, el ajuste global aumenta moderadamente ((R^2\approx 0{,}110;\ R^2_{\text{aj}}\approx 0{,}094)) y el coeficiente de esta variable aparece **positivo y estadísticamente significativo** en el **modelo completo** con ambas variables de género. Sin embargo, esta señal no se replica en las **correlaciones parciales controlando por peso de empresa**, que resultan **no significativas** para directorios y ejecutivos. En conjunto, la evidencia sugiere **cautela interpretativa**: aunque el modelo con ambas variables muestra una mejora estadística respecto de la base, la **consistencia** del hallazgo es limitada cuando se triangula con correlaciones parciales y con las pruebas no paramétricas y por terciles.
+
+En síntesis, el patrón general es **coherente** con una relación entre **tamaño relativo** y **menor discrecionalidad por devengos** en esta métrica, y **no ofrece evidencia robusta** de que la representación de mujeres en órganos de decisión se asocie de manera estable con el índice de Kothari una vez considerado el peso de empresa. Esto es consistente con un escenario sectorial donde la discreción tendería a **desplazarse hacia actividades reales** más que hacia devengos, lo que reduce la potencia de los contrastes basados en AEM frente a proxies de **Real Earnings Management (REM)** en minería.
