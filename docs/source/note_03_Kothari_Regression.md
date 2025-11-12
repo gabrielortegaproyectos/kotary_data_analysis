@@ -14,13 +14,13 @@ $$\frac{TA_{i,t}}{A_{i,t-1}} = \alpha_0 + \alpha_1(\frac{1}{A_{i,t-1}}) + \alpha
 
 | Parámetro | Estimación |
 |-----------|------------|
-| Intercepto (α₀) | -0.108147 |
-| X1 (α₁) | 14668551.541220 |
-| X2 (α₂) | 0.147164 |
-| X3 (α₃) | -0.030775 |
-| X4 (α₄) | 0.004918 |
-| R² | 0.292012 |
-| Observaciones | 158 |
+| Intercepto (α₀) | -0.111689 |
+| X1 (α₁) | 17953151.664667 |
+| X2 (α₂) | 0.152545 |
+| X3 (α₃) | -0.030590 |
+| X4 (α₄) | 0.004832 |
+| R² | 0.289608 |
+| Observaciones | 157 |
 
 ## Índice de Kothari (Devengos Discrecionales)
 
@@ -29,12 +29,12 @@ El Índice de Kothari corresponde a los residuos de la regresión ($\varepsilon_
 | Estadístico | Valor |
 |-------------|-------|
 | Media | 0.000000 |
-| Mediana | 0.028758 |
-| Desviación Estándar | 0.166729 |
-| Mínimo | -1.161487 |
-| Máximo | 0.372025 |
-| Skewness | -3.284794 |
-| Kurtosis | 18.312338 |
+| Mediana | 0.028962 |
+| Desviación Estándar | 0.166190 |
+| Mínimo | -1.168834 |
+| Máximo | 0.363380 |
+| Skewness | -3.434084 |
+| Kurtosis | 19.332551 |
 
 ## Interpretación
 

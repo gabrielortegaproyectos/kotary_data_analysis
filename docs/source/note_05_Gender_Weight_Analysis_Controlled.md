@@ -23,9 +23,9 @@ En el análisis anterior (notebook 04), se encontró que el peso de empresa tien
 
 | Variable | VIF |
 |----------|-----|
-| peso_empresa | 1.066 |
-| peso_muj_dir | 2.310 |
-| peso_muj_ejec | 2.343 |
+| peso_empresa | 1.065 |
+| peso_muj_dir | 2.315 |
+| peso_muj_ejec | 2.349 |
 
 *Interpretación: VIF < 5 indica que no hay problemas de multicolinealidad.*
 
@@ -35,8 +35,8 @@ Correlaciones entre variables de género y el Índice de Kothari, controlando po
 
 | Variable | Correlación Parcial | P-value | N | Significancia (α=0.05) |
 |----------|---------------------|---------|---|------------------------|
-| peso_muj_dir | 0.069941 | 0.455644 | 116 | No |
-| peso_muj_ejec | 0.051801 | 0.533209 | 147 | No |
+| peso_muj_dir | 0.042117 | 0.654933 | 115 | No |
+| peso_muj_ejec | 0.051046 | 0.540609 | 146 | No |
 
 ## Modelos de Regresión Lineal Múltiple
 
@@ -44,27 +44,27 @@ Correlaciones entre variables de género y el Índice de Kothari, controlando po
 
 | Modelo | R² | R² Ajustado | AIC | BIC | F-statistic | P-value |
 |--------|-----|-------------|-----|-----|-------------|---------|
-| Modelo 1: peso_empresa | 0.012535 | 0.003873 | -68.23 | -62.73 | 1.4471 | 0.231486 |
-| Modelo 2: + peso_muj_dir | 0.017365 | -0.000027 | -66.80 | -58.54 | 0.9985 | 0.371670 |
-| Modelo 3: + peso_muj_ejec | 0.109814 | 0.094059 | -78.27 | -70.00 | 6.9699 | 0.001398 |
-| Modelo 4: + ambas variables género | 0.110356 | 0.086526 | -76.34 | -65.32 | 4.6310 | 0.004315 |
+| Modelo 1: peso_empresa | 0.014431 | 0.005709 | -67.45 | -61.96 | 1.6545 | 0.200973 |
+| Modelo 2: + peso_muj_dir | 0.016179 | -0.001389 | -65.66 | -57.42 | 0.9209 | 0.401149 |
+| Modelo 3: + peso_muj_ejec | 0.109646 | 0.093746 | -77.14 | -68.90 | 6.8963 | 0.001498 |
+| Modelo 4: + ambas variables género | 0.109655 | 0.085591 | -75.14 | -64.16 | 4.5569 | 0.004747 |
 
 ### Coeficientes del Modelo Completo (Modelo 4)
 
 | Variable | Coeficiente | Error Estándar | T-statistic | P-value | Significancia |
 |----------|-------------|----------------|-------------|---------|---------------|
-| Intercepto | -0.118613 | 0.041411 | -2.8643 | 0.004991 | Sí |
-| peso_empresa | 0.003360 | 0.001594 | 2.1076 | 0.037293 | Sí |
-| peso_muj_dir | 0.000412 | 0.001576 | 0.2611 | 0.794468 | No |
-| peso_muj_ejec | 0.009237 | 0.002700 | 3.4215 | 0.000870 | Sí |
+| Intercepto | -0.111030 | 0.041744 | -2.6598 | 0.008977 | Sí |
+| peso_empresa | 0.003341 | 0.001601 | 2.0866 | 0.039218 | Sí |
+| peso_muj_dir | -0.000053 | 0.001567 | -0.0338 | 0.973090 | No |
+| peso_muj_ejec | 0.009326 | 0.002732 | 3.4138 | 0.000895 | Sí |
 
 ### Tests F para Modelos Anidados
 
 | Comparación | F-statistic | P-value | ¿Mejora significativa? |
 |-------------|-------------|---------|------------------------|
-| Modelo 2 vs Modelo 1 | -0.555477 | nan | No |
-| Modelo 3 vs Modelo 1 | -12.348611 | nan | No |
-| Modelo 4 vs Modelo 1 | -6.157487 | nan | No |
+| Modelo 2 vs Modelo 1 | -0.199024 | nan | No |
+| Modelo 3 vs Modelo 1 | -11.977343 | nan | No |
+| Modelo 4 vs Modelo 1 | -5.935834 | nan | No |
 
 ## Interpretación
 
