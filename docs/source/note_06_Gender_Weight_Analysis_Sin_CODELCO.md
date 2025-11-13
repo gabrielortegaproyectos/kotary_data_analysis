@@ -21,7 +21,6 @@ Analizar si existen diferencias significativas en la representación de mujeres 
 
 | Variable | Correlación | P-value | Significancia (α=0.05) |
 |----------|------------|---------|--------|
-| peso_empresa | -0.174770 | 0.033626 | Sí |
 | peso_muj_dir | 0.021563 | 0.826337 | No |
 | peso_muj_ejec | 0.075796 | 0.378691 | No |
 
@@ -29,7 +28,6 @@ Analizar si existen diferencias significativas en la representación de mujeres 
 
 | Variable | Correlación | P-value | Significancia (α=0.05) |
 |----------|------------|---------|--------|
-| peso_empresa | -0.239926 | 0.003313 | Sí |
 | peso_muj_dir | 0.177723 | 0.068362 | No |
 | peso_muj_ejec | 0.028893 | 0.737505 | No |
 
@@ -39,7 +37,6 @@ Se categorizaron las variables de peso en terciles (Bajo, Medio, Alto) y se apli
 
 | Variable | F-statistic | P-value | Significancia (α=0.05) |
 |----------|------------|---------|--------|
-| peso_empresa | 1.479343 | 0.231205 | No |
 | peso_muj_dir | 0.228103 | 0.796444 | No |
 | peso_muj_ejec | 0.118991 | 0.887909 | No |
 
