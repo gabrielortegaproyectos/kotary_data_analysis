@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Versión actual de la Metodología &mdash; kotari_gender_data_analysis 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+    <link rel="canonical" href="https://gabrielortegaproyectos.github.io/kotary_data_analysis/page_02_method.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+        <script>window.MathJax = {"tex": {"tags": "ams", "macros": {"\\E": "\\mathbb{E}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Versión actual de los Resultados" href="page_03_results.html" />
+    <link rel="prev" title="Versión actual de la introducción" href="page_01_intro.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            kotari_gender_data_analysis
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Análisis de Datos</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="note_00_EDA_Sheet1.html">Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘BASE DE DATOS’</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#dimensiones-del-dataset">Dimensiones del Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#valores-faltantes-por-columna">Valores Faltantes por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-valores-unicos-por-columna">Distribución de Valores Únicos por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#analisis-detallado-de-variables-categoricas">Análisis Detallado de Variables Categóricas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-rut">Distribución de ‘RUT’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-rut">Porcentajes para ‘RUT’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-empresa">Distribución de ‘EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-empresa">Porcentajes para ‘EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-cotiza-en-bolsa">Distribución de ‘COTIZA EN BOLSA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-cotiza-en-bolsa">Porcentajes para ‘COTIZA EN BOLSA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-emp-fami">Distribución de ‘EMP. FAMI’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-emp-fami">Porcentajes para ‘EMP. FAMI’</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#estadisticas-descriptivas-de-variables-numericas">Estadísticas Descriptivas de Variables Numéricas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="note_01_EDA_Sheet2.html">Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘LISTADO EMPRESA’</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#dimensiones-del-dataset">Dimensiones del Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#valores-faltantes-por-columna">Valores Faltantes por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-valores-unicos-por-columna">Distribución de Valores Únicos por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#analisis-detallado-de-variables-categoricas">Análisis Detallado de Variables Categóricas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-pais-de-origen">Distribución de ‘PAÍS DE ORIGEN’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-pais-de-origen">Porcentajes para ‘PAÍS DE ORIGEN’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-origen-nacional">Distribución de ‘ORIGEN NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-origen-nacional">Porcentajes para ‘ORIGEN NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-propietario-principal">Distribución de ‘PROPIETARIO PRINCIPAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-propietario-principal">Porcentajes para ‘PROPIETARIO PRINCIPAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-propietario-nacional">Distribución de ‘PROPIETARIO NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-propietario-nacional">Porcentajes para ‘PROPIETARIO NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-tipo-de-empresa">Distribución de ‘TIPO DE EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-tipo-de-empresa">Porcentajes para ‘TIPO DE EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-tipo-de-mineral">Distribución de ‘TIPO DE MINERAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-tipo-de-mineral">Porcentajes para ‘TIPO DE MINERAL’</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#estadisticas-descriptivas-de-variables-numericas">Estadísticas Descriptivas de Variables Numéricas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_00_kothari_index.html">Índice de Kothari — Matching de variables y guía breve</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#proposito">Propósito</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#que-es-el-indice-de-kothari-definicion-breve">¿Qué es el índice de Kothari? (definición breve)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#matching-de-variables-requeridas-y-columnas-del-dataset">Matching de variables requeridas y columnas del dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_01_intro.html">Versión actual de la introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#introduccion">1.1 Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#contabilidad-como-construccion-institucional">1.2 Contabilidad como construcción institucional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#traduccion-latinoamericana-de-las-metricas-de-devengo">1.3 Traducción latinoamericana de las métricas de devengo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#un-escenario-sectorial-exigente-mineria-chilena-y-dependencia-del-instrumento">1.4 Un escenario sectorial exigente: minería chilena y dependencia del instrumento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#diseno-empirico-lectura-del-nulo-y-agenda">1.5 Diseño empírico, lectura del nulo y agenda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#bibliografia">Bibliografía</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Versión actual de la Metodología</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#metodologia">2. Metodología</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#datos">2.1 Datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#modelo-de-kothari">2.2 Modelo de Kothari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#analisis">2.3 Análisis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#referencias">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_03_results.html">Versión actual de los Resultados</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_03_results.html#resultados">3. Resultados</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_04_discussion.html">Versión actual de la Discusión</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_04_discussion.html#parrafos-para-la-introduccion">Párrafos para la Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_04_discussion.html#discusion">4. Discusión</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">kotari_gender_data_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Versión actual de la Metodología</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section class="tex2jax_ignore mathjax_ignore" id="version-actual-de-la-metodologia">
+<h1>Versión actual de la Metodología<a class="headerlink" href="#version-actual-de-la-metodologia" title="Link to this heading"></a></h1>
+<blockquote>
+<div><blockquote>
+<div><p><em>Esta es la versión actualizada de la Metodología el 06 de noviembre.</em></p>
+</div></blockquote>
+</div></blockquote>
+<section id="metodologia">
+<h2>2. Metodología<a class="headerlink" href="#metodologia" title="Link to this heading"></a></h2>
+<section id="datos">
+<h3>2.1 Datos<a class="headerlink" href="#datos" title="Link to this heading"></a></h3>
+<p>Este estudio utiliza información proveniente de las memorias anuales disponibles en la Comisión para el Mercado Financiero para compañías mineras que operan en Chile (CMF). La base de datos configura un panel firma-año para el período 2012–2023. En cada año se observan tanto las variables financieras requeridas por el modelo de Kothari (como utilidades, flujo de efectivo de operación (CFO), ventas, cuentas por cobrar, propiedades, planta y equipo (PPE) y activos totales al inicio del año) como las variables de diversidad de género (como el número de mujeres en directorios, el número de mujeres en otros cargos ejecutivos, el total de miembros de los directorios y el total de otros cargos ejecutivos). La unidad de análisis es la firma-año. El universo inicial contempla 19 compañías, pero el conjunto efectivo incluye 16, ya que tres no registran en ningún año las variables mínimas requeridas por la especificación utilizada (véase sección 2.2, Modelo de Kothari). Las firmas del panel aportan entre 7 y 11 períodos de observación cada una, lo que asegura que no existan firmas con un número de años de observación excesivamente bajo. El número final de observaciones es de 158 firmas-año.</p>
+<p>Las variables financieras estudiadas, expresadas en millones (M), presentan los siguientes promedios (± desviación estándar): utilidad neta 351,92 M (± 830,37 M), CFO 800,19 M (± 1.460,38 M), activos totales al inicio del año 4.729,17 M (± 8.521,28 M), ventas 1.380,68 M (± 2.307,88 M), cuentas por cobrar 321,88 M (± 643,15 M) y PPE 3.452,09 M (± 6.400,00 M). Esta elevada dispersión es consistente con la heterogeneidad de tamaño entre las firmas del sector minero. Por otro lado, el total de integrantes en los directorios promedia 6,18 (± 4,60) y el total de otros ejecutivos 7,66 (± 5,59), mientras que la participación de mujeres en directorios promedia 17,56 % (± 11,38 %), con valores entre 2,44 % y 35,23 %, y en otros ejecutivos 7,95 % (± 6,69 %), con valores entre 0,00 % y 20,61 %. Estas cifras reflejan la fuerte sobrerrepresentación masculina en los órganos de gobierno corporativo del sector minero.</p>
+</section>
+<section id="modelo-de-kothari">
+<h3>2.2 Modelo de Kothari<a class="headerlink" href="#modelo-de-kothari" title="Link to this heading"></a></h3>
+<p>El modelo de Kothari, Leone y Wasley se utiliza para medir el componente discrecional de los devengos incorporando un ajuste explícito por desempeño, lo que reduce sesgos asociados a la rentabilidad subyacente y a diferencias persistentes de capital de trabajo (Kothari, Leone, &amp; Wasley, 2005). Esta especificación extiende la lógica de Jones y sus variantes al controlar por retorno sobre activos, de modo que el residual capture de forma más limpia la discreción contable y no simples cambios en condiciones operativas (Jones, 1991; Dechow, Sloan, &amp; Sweeney, 1995; Kasznik, 1999). La pertinencia de este ajuste es especialmente alta en sectores intensivos en capital, donde la rentabilidad y el ciclo de inversión pueden oscilar ampliamente entre periodos y firmas. En este sentido, el modelo de Kothari ofrece una base comparativa más estable que las especificaciones que no controlan directamente por desempeño. Esta elección metodológica permite evaluar asociaciones entre diversidad de género y devengos con menor riesgo de confusión por diferencias estructurales de rentabilidad. En este marco, el índice derivado de Kothari se interpreta como una medida de gestión de resultados por devengos: valores más alejados de cero indican un mayor uso de discrecionalidad contable, mientras que valores cercanos a cero sugieren estados financieros más próximos a una política “normal” de reconocimiento. En lo que sigue se presenta la especificación formal y la construcción del índice.</p>
+<p>Formalmente, se modelan los devengos totales <span class="math notranslate nohighlight">\(TA_{i,t}\)</span> escalados por los activos totales al inicio del año <span class="math notranslate nohighlight">\(A_{i,t-1}\)</span> como función de componentes de capital de trabajo, PPE y desempeño. Denotando <span class="math notranslate nohighlight">\(TA_{i,t} = \text{utilidad neta}_{i,t} - \text{CFO}_{i,t}\)</span>, la ecuación estimada es</p>
+<div class="math notranslate nohighlight">
+\[
+\frac{TA_{i,t}}{A_{i,t-1}}=\alpha_0+\alpha_1\left(\frac{1}{A_{i,t-1}}\right)+\alpha_2\left(\frac{\Delta REV_{i,t}-\Delta REC_{i,t}}{A_{i,t-1}}\right)+\alpha_3\left(\frac{PPE_{i,t}}{A_{i,t-1}}\right)+\alpha_4 ROA_{i,t}+\varepsilon_{i,t}.
+\]</div>
+<p>Aquí, <span class="math notranslate nohighlight">\(\Delta REV_{i,t}\)</span> corresponde a la variación interanual de ventas, <span class="math notranslate nohighlight">\(\Delta REC_{i,t}\)</span> a la variación interanual de cuentas por cobrar, <span class="math notranslate nohighlight">\(PPE_{i,t}\)</span> a propiedades, planta y equipo (PPE) y <span class="math notranslate nohighlight">\(A_{i,t-1}\)</span> a los activos totales al inicio del año, tal como se describen en la sección de datos. <span class="math notranslate nohighlight">\(ROA_{i,t}\)</span> opera como control de desempeño contemporáneo. El escalamiento por <span class="math notranslate nohighlight">\(A_{i,t-1}\)</span> favorece la comparabilidad entre firmas de tamaños heterogéneos y reduce la influencia de niveles absolutos. El residual <span class="math notranslate nohighlight">\(\varepsilon_{i,t}\)</span> se interpreta como devengo discrecional condicional al desempeño contemporáneo y constituye el índice de Kothari utilizado en este estudio.</p>
+<p>Las variables construidas que ingresan a la especificación son tres: (<span class="math notranslate nohighlight">\(TA_{i,t}\)</span>), (<span class="math notranslate nohighlight">\(\Delta REV_{i,t}\)</span>) y (<span class="math notranslate nohighlight">\(\Delta REC_{i,t}\)</span>). En términos descriptivos, y expresadas en millones (M), presentan los siguientes promedios (± desviación estándar): devengos totales −450,78 M (± 948,60 M), variación de ingresos 40,86 M (± 682,24 M) y variación en cuentas por cobrar 9,19 M (± 166,29 M). En coherencia con la especificación de Kothari et al. (2005), estas variables se escalan por (A_{i,t-1}) para su inclusión en el modelo. Con estas definiciones, el índice se construye a partir del residual de la ecuación.</p>
+<p>Con estas definiciones, el Índice de Kothari se define como el residual estimado (<span class="math notranslate nohighlight">\(\hat{\varepsilon}_{i,t}\)</span>) de la ecuación anterior, obtenido mediante mínimos cuadrados ordinarios sobre el panel firma-año. La estimación utiliza errores estándar robustos a la heterocedasticidad. En conjunto, estos ajustes buscan que la asociación entre diversidad de género y discreción en los devengos no sea un artefacto de variaciones coyunturales de escala o desempeño, sino que refleje con mayor precisión patrones de gobierno corporativo.</p>
+</section>
+<section id="analisis">
+<h3>2.3 Análisis<a class="headerlink" href="#analisis" title="Link to this heading"></a></h3>
+<p>Este estudio adopta un diseño empírico orientado a poner a prueba la trasladabilidad institucional de métricas estándar de devengos discrecionales en un sector particularmente desafiante para la inferencia empírica: la gran minería chilena. El objetivo es evaluar si la asociación entre diversidad de género en directorios y devengos discrecionales se mantiene, se atenúa o desaparece en un régimen productivo intensivo en capital, con fuertes restricciones operativas y contractuales.</p>
+<p>La variable de interés en gobernanza es la participación de mujeres en directorios, medida anualmente como proporción del total de asientos. En análisis complementarios se considera la participación de mujeres en otros cargos ejecutivos y el peso de empresa. La estrategia de análisis se organiza en dos componentes. El componente principal estima correlaciones entre el Índice de Kothari y cada una de estas variables (participación de mujeres en directorios, participación de mujeres en ejecutivos y peso de empresa). Se reportan correlaciones de Pearson como medida principal, dada la práctica habitual en la literatura, y correlaciones de Spearman como análisis de robustez ante posibles asimetrías y valores extremos; en ambos casos se informan el coeficiente de correlación (<span class="math notranslate nohighlight">\(r\)</span>) y su valor (<span class="math notranslate nohighlight">\(p\)</span>), con pruebas a dos colas y nivel de significancia (<span class="math notranslate nohighlight">\(\alpha = 0{,}05\)</span>). Adicionalmente, el análisis con el peso de empresa como variable focal permite contrastar si la asociación entre el Índice de Kothari y la escala de la firma se comporta de manera consistente con lo reportado en la literatura previa. El segundo componente del análisis construye terciles para la participación de mujeres en directorios, la participación de mujeres en ejecutivos y el peso de empresa, y contrasta si el Índice de Kothari difiere entre grupos mediante análisis de varianza (ANOVA), manteniendo el mismo nivel de significancia.</p>
+<p>Como análisis de sensibilidad adicional, se replica el conjunto de procedimientos excluyendo a Codelco. Esta réplica busca descartar que un actor de gran escala afecte de manera desproporcionada los resultados, ya sea por su influencia en la distribución del peso de empresa o por su incidencia sobre los residuales del modelo.</p>
+</section>
+</section>
+<section id="referencias">
+<h2>Referencias<a class="headerlink" href="#referencias" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Adams, R. B., &amp; Ferreira, D. (2009). Women in the boardroom and their impact on governance and performance. Journal of Financial Economics, 94(2), 291–309.
+Dechow, P. M., Sloan, R. G., &amp; Sweeney, A. P. (1995). Detecting earnings management. The Accounting Review, 70(2), 193–225.</p></li>
+<li><p>Jones, J. J. (1991). Earnings management during import relief investigations. Journal of Accounting Research, 29(2), 193–228.</p></li>
+<li><p>Kanter, R. M. (1977). Men and women of the corporation. Basic Books.
+Kasznik, R. (1999). On the association between voluntary disclosure and earnings management. Journal of Accounting Research, 37(1), 57–81.</p></li>
+<li><p>Kothari, S. P., Leone, A. J., &amp; Wasley, C. (2005). Performance matched discretionary accrual measures. Journal of Accounting and Economics, 39(1), 163–197.</p></li>
+<li><p>Leuz, C., Nanda, D., &amp; Wysocki, P. (2003). Earnings management and investor protection: An international comparison. Journal of Financial Economics, 69(3), 505–527.</p></li>
+<li><p>Post, C., &amp; Byron, K. (2015). Women on boards and firm financial performance: A meta-analysis. Academy of Management Journal, 58(5), 1546–1571.</p></li>
+<li><p>Roychowdhury, S. (2006). Earnings management through real activities manipulation. Journal of Accounting and Economics, 42(3), 335–370.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="page_01_intro.html" class="btn btn-neutral float-left" title="Versión actual de la introducción" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="page_03_results.html" class="btn btn-neutral float-right" title="Versión actual de los Resultados" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

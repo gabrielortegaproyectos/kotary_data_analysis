@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Estadísticos Descriptivos de Variables Relevantes Kothari &mdash; kotari_gender_data_analysis 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+    <link rel="canonical" href="https://gabrielortegaproyectos.github.io/kotary_data_analysis/note_02_Kothari_Stats.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            kotari_gender_data_analysis
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Análisis de Datos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="note_00_EDA_Sheet1.html">Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘BASE DE DATOS’</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#dimensiones-del-dataset">Dimensiones del Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#valores-faltantes-por-columna">Valores Faltantes por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-valores-unicos-por-columna">Distribución de Valores Únicos por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#analisis-detallado-de-variables-categoricas">Análisis Detallado de Variables Categóricas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-rut">Distribución de ‘RUT’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-rut">Porcentajes para ‘RUT’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-empresa">Distribución de ‘EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-empresa">Porcentajes para ‘EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-cotiza-en-bolsa">Distribución de ‘COTIZA EN BOLSA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-cotiza-en-bolsa">Porcentajes para ‘COTIZA EN BOLSA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-emp-fami">Distribución de ‘EMP. FAMI’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-emp-fami">Porcentajes para ‘EMP. FAMI’</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#estadisticas-descriptivas-de-variables-numericas">Estadísticas Descriptivas de Variables Numéricas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="note_01_EDA_Sheet2.html">Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘LISTADO EMPRESA’</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#dimensiones-del-dataset">Dimensiones del Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#valores-faltantes-por-columna">Valores Faltantes por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-valores-unicos-por-columna">Distribución de Valores Únicos por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#analisis-detallado-de-variables-categoricas">Análisis Detallado de Variables Categóricas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-pais-de-origen">Distribución de ‘PAÍS DE ORIGEN’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-pais-de-origen">Porcentajes para ‘PAÍS DE ORIGEN’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-origen-nacional">Distribución de ‘ORIGEN NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-origen-nacional">Porcentajes para ‘ORIGEN NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-propietario-principal">Distribución de ‘PROPIETARIO PRINCIPAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-propietario-principal">Porcentajes para ‘PROPIETARIO PRINCIPAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-propietario-nacional">Distribución de ‘PROPIETARIO NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-propietario-nacional">Porcentajes para ‘PROPIETARIO NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-tipo-de-empresa">Distribución de ‘TIPO DE EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-tipo-de-empresa">Porcentajes para ‘TIPO DE EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-tipo-de-mineral">Distribución de ‘TIPO DE MINERAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-tipo-de-mineral">Porcentajes para ‘TIPO DE MINERAL’</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#estadisticas-descriptivas-de-variables-numericas">Estadísticas Descriptivas de Variables Numéricas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_00_kothari_index.html">Índice de Kothari — Matching de variables y guía breve</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#proposito">Propósito</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#que-es-el-indice-de-kothari-definicion-breve">¿Qué es el índice de Kothari? (definición breve)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#matching-de-variables-requeridas-y-columnas-del-dataset">Matching de variables requeridas y columnas del dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_01_intro.html">Versión actual de la introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#introduccion">1.1 Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#contabilidad-como-construccion-institucional">1.2 Contabilidad como construcción institucional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#traduccion-latinoamericana-de-las-metricas-de-devengo">1.3 Traducción latinoamericana de las métricas de devengo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#un-escenario-sectorial-exigente-mineria-chilena-y-dependencia-del-instrumento">1.4 Un escenario sectorial exigente: minería chilena y dependencia del instrumento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#diseno-empirico-lectura-del-nulo-y-agenda">1.5 Diseño empírico, lectura del nulo y agenda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#bibliografia">Bibliografía</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_02_method.html">Versión actual de la Metodología</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_02_method.html#metodologia">2. Metodología</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="page_02_method.html#datos">2.1 Datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_02_method.html#modelo-de-kothari">2.2 Modelo de Kothari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_02_method.html#analisis">2.3 Análisis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="page_02_method.html#referencias">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_03_results.html">Versión actual de los Resultados</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_03_results.html#resultados">3. Resultados</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_04_discussion.html">Versión actual de la Discusión</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_04_discussion.html#parrafos-para-la-introduccion">Párrafos para la Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_04_discussion.html#discusion">4. Discusión</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">kotari_gender_data_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Estadísticos Descriptivos de Variables Relevantes Kothari</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section class="tex2jax_ignore mathjax_ignore" id="estadisticos-descriptivos-de-variables-relevantes-kothari">
+<h1>Estadísticos Descriptivos de Variables Relevantes Kothari<a class="headerlink" href="#estadisticos-descriptivos-de-variables-relevantes-kothari" title="Link to this heading"></a></h1>
+<!-- Este archivo muestra los estadísticos descriptivos de las variables relevantes para el modelo de Kothari. -->
+<p><strong>Fuente:</strong> notebooks/02_Clean_Data.ipynb</p>
+<section id="resumen-de-limpieza-de-datos">
+<h2>Resumen de limpieza de datos<a class="headerlink" href="#resumen-de-limpieza-de-datos" title="Link to this heading"></a></h2>
+<p>En este notebook se realizó la limpieza de la base de datos para el modelo de Kothari. Se identificaron las columnas relevantes, se eliminaron las filas con valores faltantes (NaN) en dichas columnas y aquellas donde los activos totales al inicio del año eran cero. Además, se crearon variables adicionales como el peso relativo de cada empresa y los devengos totales. El resultado es un DataFrame filtrado y listo para el análisis exploratorio y el cálculo de los devengos discrecionales.</p>
+</section>
+<section id="tabla-de-estadisticos">
+<h2>Tabla de Estadísticos<a class="headerlink" href="#tabla-de-estadisticos" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>N</p></th>
+<th class="head"><p>Minimum</p></th>
+<th class="head"><p>Maximum</p></th>
+<th class="head"><p>Mean</p></th>
+<th class="head"><p>Std. Dev</p></th>
+<th class="head"><p>Skewness</p></th>
+<th class="head"><p>Kurtosis</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UTILIDAD NETA</p></td>
+<td><p>157</p></td>
+<td><p>-2191000000.00</p></td>
+<td><p>3889000000.00</p></td>
+<td><p>354450621.03</p></td>
+<td><p>832414890.27</p></td>
+<td><p>1.84</p></td>
+<td><p>4.85</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROA</p></td>
+<td><p>157</p></td>
+<td><p>-114.93</p></td>
+<td><p>47.67</p></td>
+<td><p>0.34</p></td>
+<td><p>21.53</p></td>
+<td><p>-2.88</p></td>
+<td><p>11.51</p></td>
+</tr>
+<tr class="row-even"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>157</p></td>
+<td><p>0.00</p></td>
+<td><p>6.00</p></td>
+<td><p>0.97</p></td>
+<td><p>1.17</p></td>
+<td><p>1.15</p></td>
+<td><p>1.15</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en Directorios</p></td>
+<td><p>157</p></td>
+<td><p>0.00</p></td>
+<td><p>14.00</p></td>
+<td><p>6.18</p></td>
+<td><p>4.60</p></td>
+<td><p>-0.03</p></td>
+<td><p>-1.01</p></td>
+</tr>
+<tr class="row-even"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>157</p></td>
+<td><p>0.00</p></td>
+<td><p>6.00</p></td>
+<td><p>0.67</p></td>
+<td><p>1.14</p></td>
+<td><p>2.24</p></td>
+<td><p>5.15</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en otros ejecutivos</p></td>
+<td><p>157</p></td>
+<td><p>0.00</p></td>
+<td><p>33.00</p></td>
+<td><p>7.66</p></td>
+<td><p>5.59</p></td>
+<td><p>1.12</p></td>
+<td><p>2.10</p></td>
+</tr>
+<tr class="row-even"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>157</p></td>
+<td><p>-173458000.00</p></td>
+<td><p>8301000000.00</p></td>
+<td><p>805232373.31</p></td>
+<td><p>1463676033.17</p></td>
+<td><p>2.46</p></td>
+<td><p>6.40</p></td>
+</tr>
+<tr class="row-odd"><td><p>Activos total al inicio de anio</p></td>
+<td><p>157</p></td>
+<td><p>152153000.00</p></td>
+<td><p>40824000000.00</p></td>
+<td><p>4758469213.66</p></td>
+<td><p>8540558129.81</p></td>
+<td><p>2.88</p></td>
+<td><p>7.81</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas</p></td>
+<td><p>157</p></td>
+<td><p>-4769165.00</p></td>
+<td><p>10631000000.00</p></td>
+<td><p>1380676083.04</p></td>
+<td><p>2307879334.18</p></td>
+<td><p>2.26</p></td>
+<td><p>4.97</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar</p></td>
+<td><p>157</p></td>
+<td><p>0.00</p></td>
+<td><p>4194350000.00</p></td>
+<td><p>321884152.85</p></td>
+<td><p>643147674.58</p></td>
+<td><p>3.40</p></td>
+<td><p>12.91</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>157</p></td>
+<td><p>-2797000000.00</p></td>
+<td><p>5231138000.00</p></td>
+<td><p>40858636.99</p></td>
+<td><p>682241230.32</p></td>
+<td><p>2.51</p></td>
+<td><p>22.64</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>157</p></td>
+<td><p>-603143000.00</p></td>
+<td><p>945033000.00</p></td>
+<td><p>9192315.55</p></td>
+<td><p>166289797.27</p></td>
+<td><p>1.51</p></td>
+<td><p>10.20</p></td>
+</tr>
+<tr class="row-even"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>157</p></td>
+<td><p>0.00</p></td>
+<td><p>30449893000.00</p></td>
+<td><p>3452093379.66</p></td>
+<td><p>6399999053.76</p></td>
+<td><p>2.71</p></td>
+<td><p>6.95</p></td>
+</tr>
+<tr class="row-odd"><td><p>TA</p></td>
+<td><p>157</p></td>
+<td><p>-5586363000.00</p></td>
+<td><p>751680000.00</p></td>
+<td><p>-450781752.29</p></td>
+<td><p>948599428.69</p></td>
+<td><p>-3.14</p></td>
+<td><p>10.47</p></td>
+</tr>
+<tr class="row-even"><td><p>peso_empresa</p></td>
+<td><p>157</p></td>
+<td><p>0.32</p></td>
+<td><p>43.64</p></td>
+<td><p>5.99</p></td>
+<td><p>10.50</p></td>
+<td><p>2.74</p></td>
+<td><p>6.81</p></td>
+</tr>
+<tr class="row-odd"><td><p>peso_muj_dir</p></td>
+<td><p>115</p></td>
+<td><p>2.44</p></td>
+<td><p>35.23</p></td>
+<td><p>17.56</p></td>
+<td><p>11.38</p></td>
+<td><p>0.34</p></td>
+<td><p>-1.23</p></td>
+</tr>
+<tr class="row-even"><td><p>peso_muj_ejec</p></td>
+<td><p>146</p></td>
+<td><p>0.00</p></td>
+<td><p>20.61</p></td>
+<td><p>7.95</p></td>
+<td><p>6.69</p></td>
+<td><p>0.50</p></td>
+<td><p>-0.91</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Generado automáticamente desde el notebook.</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

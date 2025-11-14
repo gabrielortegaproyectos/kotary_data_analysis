@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análisis de Relación entre Pesos de Género y Índice de Kothari (Sin CODELCO) &mdash; kotari_gender_data_analysis 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+    <link rel="canonical" href="https://gabrielortegaproyectos.github.io/kotary_data_analysis/note_06_Gender_Weight_Analysis_Sin_CODELCO.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            kotari_gender_data_analysis
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Análisis de Datos</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="note_00_EDA_Sheet1.html">Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘BASE DE DATOS’</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#dimensiones-del-dataset">Dimensiones del Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#valores-faltantes-por-columna">Valores Faltantes por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-valores-unicos-por-columna">Distribución de Valores Únicos por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#analisis-detallado-de-variables-categoricas">Análisis Detallado de Variables Categóricas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-rut">Distribución de ‘RUT’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-rut">Porcentajes para ‘RUT’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-empresa">Distribución de ‘EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-empresa">Porcentajes para ‘EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-cotiza-en-bolsa">Distribución de ‘COTIZA EN BOLSA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-cotiza-en-bolsa">Porcentajes para ‘COTIZA EN BOLSA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#distribucion-de-emp-fami">Distribución de ‘EMP. FAMI’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_00_EDA_Sheet1.html#porcentajes-para-emp-fami">Porcentajes para ‘EMP. FAMI’</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="note_00_EDA_Sheet1.html#estadisticas-descriptivas-de-variables-numericas">Estadísticas Descriptivas de Variables Numéricas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="note_01_EDA_Sheet2.html">Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘LISTADO EMPRESA’</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#dimensiones-del-dataset">Dimensiones del Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#valores-faltantes-por-columna">Valores Faltantes por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-valores-unicos-por-columna">Distribución de Valores Únicos por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#analisis-detallado-de-variables-categoricas">Análisis Detallado de Variables Categóricas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-pais-de-origen">Distribución de ‘PAÍS DE ORIGEN’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-pais-de-origen">Porcentajes para ‘PAÍS DE ORIGEN’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-origen-nacional">Distribución de ‘ORIGEN NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-origen-nacional">Porcentajes para ‘ORIGEN NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-propietario-principal">Distribución de ‘PROPIETARIO PRINCIPAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-propietario-principal">Porcentajes para ‘PROPIETARIO PRINCIPAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-propietario-nacional">Distribución de ‘PROPIETARIO NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-propietario-nacional">Porcentajes para ‘PROPIETARIO NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-tipo-de-empresa">Distribución de ‘TIPO DE EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-tipo-de-empresa">Porcentajes para ‘TIPO DE EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-tipo-de-mineral">Distribución de ‘TIPO DE MINERAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-tipo-de-mineral">Porcentajes para ‘TIPO DE MINERAL’</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#estadisticas-descriptivas-de-variables-numericas">Estadísticas Descriptivas de Variables Numéricas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_00_kothari_index.html">Índice de Kothari — Matching de variables y guía breve</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#proposito">Propósito</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#que-es-el-indice-de-kothari-definicion-breve">¿Qué es el índice de Kothari? (definición breve)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#matching-de-variables-requeridas-y-columnas-del-dataset">Matching de variables requeridas y columnas del dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_01_intro.html">Versión actual de la introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#introduccion">1.1 Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#contabilidad-como-construccion-institucional">1.2 Contabilidad como construcción institucional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#traduccion-latinoamericana-de-las-metricas-de-devengo">1.3 Traducción latinoamericana de las métricas de devengo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#un-escenario-sectorial-exigente-mineria-chilena-y-dependencia-del-instrumento">1.4 Un escenario sectorial exigente: minería chilena y dependencia del instrumento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#diseno-empirico-lectura-del-nulo-y-agenda">1.5 Diseño empírico, lectura del nulo y agenda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#bibliografia">Bibliografía</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_02_method.html">Versión actual de la Metodología</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_02_method.html#metodologia">2. Metodología</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="page_02_method.html#datos">2.1 Datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_02_method.html#modelo-de-kothari">2.2 Modelo de Kothari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_02_method.html#analisis">2.3 Análisis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="page_02_method.html#referencias">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_03_results.html">Versión actual de los Resultados</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_03_results.html#resultados">3. Resultados</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_04_discussion.html">Versión actual de la Discusión</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_04_discussion.html#parrafos-para-la-introduccion">Párrafos para la Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_04_discussion.html#discusion">4. Discusión</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">kotari_gender_data_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Análisis de Relación entre Pesos de Género y Índice de Kothari (Sin CODELCO)</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section class="tex2jax_ignore mathjax_ignore" id="analisis-de-relacion-entre-pesos-de-genero-y-indice-de-kothari-sin-codelco">
+<h1>Análisis de Relación entre Pesos de Género y Índice de Kothari (Sin CODELCO)<a class="headerlink" href="#analisis-de-relacion-entre-pesos-de-genero-y-indice-de-kothari-sin-codelco" title="Link to this heading"></a></h1>
+<!-- Este archivo documenta el análisis de diferencias significativas entre variables de peso (representación de mujeres) y el índice de devengos discrecionales, excluyendo a CODELCO. -->
+<p><strong>Fuente:</strong> notebooks/06_Gender_Weight_Analysis_Sin_CODELCO.ipynb</p>
+<section id="objetivo">
+<h2>Objetivo<a class="headerlink" href="#objetivo" title="Link to this heading"></a></h2>
+<p>Analizar si existen diferencias significativas en la representación de mujeres en directorios y ejecutivos con respecto al índice de devengos discrecionales de Kothari, excluyendo los datos de la empresa CODELCO para verificar si esta empresa tiene un impacto desproporcionado en los resultados.</p>
+</section>
+<section id="variables-analizadas">
+<h2>Variables Analizadas<a class="headerlink" href="#variables-analizadas" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>peso_empresa</strong>: Peso relativo de la empresa según activos totales (%)</p></li>
+<li><p><strong>peso_muj_dir</strong>: Porcentaje de mujeres en directorios</p></li>
+<li><p><strong>peso_muj_ejec</strong>: Porcentaje de mujeres en ejecutivos</p></li>
+<li><p><strong>KOTHARI_INDEX</strong>: Índice de devengos discrecionales (residuos de la regresión de Kothari)</p></li>
+</ul>
+</section>
+<section id="resultados-de-correlacion">
+<h2>Resultados de Correlación<a class="headerlink" href="#resultados-de-correlacion" title="Link to this heading"></a></h2>
+<section id="correlacion-de-pearson">
+<h3>Correlación de Pearson<a class="headerlink" href="#correlacion-de-pearson" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Correlación</p></th>
+<th class="head"><p>P-value</p></th>
+<th class="head"><p>Significancia (α=0.05)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>peso_muj_dir</p></td>
+<td><p>0.021563</p></td>
+<td><p>0.826337</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>peso_muj_ejec</p></td>
+<td><p>0.075796</p></td>
+<td><p>0.378691</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="correlacion-de-spearman-no-parametrica">
+<h3>Correlación de Spearman (No Paramétrica)<a class="headerlink" href="#correlacion-de-spearman-no-parametrica" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Correlación</p></th>
+<th class="head"><p>P-value</p></th>
+<th class="head"><p>Significancia (α=0.05)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>peso_muj_dir</p></td>
+<td><p>0.177723</p></td>
+<td><p>0.068362</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>peso_muj_ejec</p></td>
+<td><p>0.028893</p></td>
+<td><p>0.737505</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="analisis-de-varianza-anova">
+<h2>Análisis de Varianza (ANOVA)<a class="headerlink" href="#analisis-de-varianza-anova" title="Link to this heading"></a></h2>
+<p>Se categorizaron las variables de peso en terciles (Bajo, Medio, Alto) y se aplicó ANOVA para verificar si existen diferencias significativas en el Índice de Kothari entre categorías.</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>F-statistic</p></th>
+<th class="head"><p>P-value</p></th>
+<th class="head"><p>Significancia (α=0.05)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>peso_muj_dir</p></td>
+<td><p>0.228103</p></td>
+<td><p>0.796444</p></td>
+<td><p>No</p></td>
+</tr>
+<tr class="row-odd"><td><p>peso_muj_ejec</p></td>
+<td><p>0.118991</p></td>
+<td><p>0.887909</p></td>
+<td><p>No</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="interpretacion">
+<h2>Interpretación<a class="headerlink" href="#interpretacion" title="Link to this heading"></a></h2>
+<section id="sobre-la-significancia-estadistica">
+<h3>Sobre la Significancia Estadística<a class="headerlink" href="#sobre-la-significancia-estadistica" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p>Si el <strong>p-value &lt; 0.05</strong>, existe una diferencia estadísticamente significativa.</p></li>
+<li><p>Un <strong>p-value ≥ 0.05</strong> indica que no hay evidencia suficiente de diferencia significativa.</p></li>
+</ul>
+</section>
+<section id="sobre-la-correlacion">
+<h3>Sobre la Correlación<a class="headerlink" href="#sobre-la-correlacion" title="Link to this heading"></a></h3>
+<ul class="simple">
+<li><p><strong>Correlación positiva</strong>: A mayor peso de mujeres, mayor índice de Kothari (más devengos discrecionales).</p></li>
+<li><p><strong>Correlación negativa</strong>: A mayor peso de mujeres, menor índice de Kothari (menos devengos discrecionales).</p></li>
+<li><p><strong>Correlación cercana a cero</strong>: No hay relación lineal entre las variables.</p></li>
+</ul>
+</section>
+</section>
+<section id="comparacion-con-analisis-completo">
+<h2>Comparación con Análisis Completo<a class="headerlink" href="#comparacion-con-analisis-completo" title="Link to this heading"></a></h2>
+<p>Este análisis excluye a CODELCO para determinar si esta empresa tiene un impacto desproporcionado en los resultados. Compare estos resultados con el notebook 04 (análisis con todas las empresas) para identificar diferencias significativas.</p>
+<p><em>Generado automáticamente desde el notebook.</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

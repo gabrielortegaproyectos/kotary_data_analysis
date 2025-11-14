@@ -1,0 +1,1600 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘BASE DE DATOS’ &mdash; kotari_gender_data_analysis 0.1 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+
+  
+    <link rel="canonical" href="https://gabrielortegaproyectos.github.io/kotary_data_analysis/note_00_EDA_Sheet1.html" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2709fde1"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+        <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+        <script src="_static/copybutton.js?v=f281be69"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘LISTADO EMPRESA’" href="note_01_EDA_Sheet2.html" />
+    <link rel="prev" title="Welcome to project kotari_gender_data_analysis’s documentation!" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            kotari_gender_data_analysis
+          </a>
+              <div class="version">
+                0.1
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Análisis de Datos</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘BASE DE DATOS’</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#dimensiones-del-dataset">Dimensiones del Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#valores-faltantes-por-columna">Valores Faltantes por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distribucion-de-valores-unicos-por-columna">Distribución de Valores Únicos por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#analisis-detallado-de-variables-categoricas">Análisis Detallado de Variables Categóricas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#distribucion-de-rut">Distribución de ‘RUT’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#porcentajes-para-rut">Porcentajes para ‘RUT’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distribucion-de-empresa">Distribución de ‘EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#porcentajes-para-empresa">Porcentajes para ‘EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distribucion-de-cotiza-en-bolsa">Distribución de ‘COTIZA EN BOLSA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#porcentajes-para-cotiza-en-bolsa">Porcentajes para ‘COTIZA EN BOLSA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#distribucion-de-emp-fami">Distribución de ‘EMP. FAMI’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#porcentajes-para-emp-fami">Porcentajes para ‘EMP. FAMI’</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#estadisticas-descriptivas-de-variables-numericas">Estadísticas Descriptivas de Variables Numéricas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="note_01_EDA_Sheet2.html">Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘LISTADO EMPRESA’</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#dimensiones-del-dataset">Dimensiones del Dataset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#valores-faltantes-por-columna">Valores Faltantes por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-valores-unicos-por-columna">Distribución de Valores Únicos por Columna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#analisis-detallado-de-variables-categoricas">Análisis Detallado de Variables Categóricas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-pais-de-origen">Distribución de ‘PAÍS DE ORIGEN’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-pais-de-origen">Porcentajes para ‘PAÍS DE ORIGEN’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-origen-nacional">Distribución de ‘ORIGEN NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-origen-nacional">Porcentajes para ‘ORIGEN NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-propietario-principal">Distribución de ‘PROPIETARIO PRINCIPAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-propietario-principal">Porcentajes para ‘PROPIETARIO PRINCIPAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-propietario-nacional">Distribución de ‘PROPIETARIO NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-propietario-nacional">Porcentajes para ‘PROPIETARIO NACIONAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-tipo-de-empresa">Distribución de ‘TIPO DE EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-tipo-de-empresa">Porcentajes para ‘TIPO DE EMPRESA’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#distribucion-de-tipo-de-mineral">Distribución de ‘TIPO DE MINERAL’</a></li>
+<li class="toctree-l3"><a class="reference internal" href="note_01_EDA_Sheet2.html#porcentajes-para-tipo-de-mineral">Porcentajes para ‘TIPO DE MINERAL’</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="note_01_EDA_Sheet2.html#estadisticas-descriptivas-de-variables-numericas">Estadísticas Descriptivas de Variables Numéricas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_00_kothari_index.html">Índice de Kothari — Matching de variables y guía breve</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#proposito">Propósito</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#que-es-el-indice-de-kothari-definicion-breve">¿Qué es el índice de Kothari? (definición breve)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_00_kothari_index.html#matching-de-variables-requeridas-y-columnas-del-dataset">Matching de variables requeridas y columnas del dataset</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_01_intro.html">Versión actual de la introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#introduccion">1.1 Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#contabilidad-como-construccion-institucional">1.2 Contabilidad como construcción institucional</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#traduccion-latinoamericana-de-las-metricas-de-devengo">1.3 Traducción latinoamericana de las métricas de devengo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#un-escenario-sectorial-exigente-mineria-chilena-y-dependencia-del-instrumento">1.4 Un escenario sectorial exigente: minería chilena y dependencia del instrumento</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#diseno-empirico-lectura-del-nulo-y-agenda">1.5 Diseño empírico, lectura del nulo y agenda</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_01_intro.html#bibliografia">Bibliografía</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_02_method.html">Versión actual de la Metodología</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_02_method.html#metodologia">2. Metodología</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="page_02_method.html#datos">2.1 Datos</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_02_method.html#modelo-de-kothari">2.2 Modelo de Kothari</a></li>
+<li class="toctree-l3"><a class="reference internal" href="page_02_method.html#analisis">2.3 Análisis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="page_02_method.html#referencias">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_03_results.html">Versión actual de los Resultados</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_03_results.html#resultados">3. Resultados</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="page_04_discussion.html">Versión actual de la Discusión</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="page_04_discussion.html#parrafos-para-la-introduccion">Párrafos para la Introducción</a></li>
+<li class="toctree-l2"><a class="reference internal" href="page_04_discussion.html#discusion">4. Discusión</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">kotari_gender_data_analysis</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘BASE DE DATOS’</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<section class="tex2jax_ignore mathjax_ignore" id="resultados-del-analisis-exploratorio-de-datos-eda-hoja-base-de-datos">
+<h1>Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘BASE DE DATOS’<a class="headerlink" href="#resultados-del-analisis-exploratorio-de-datos-eda-hoja-base-de-datos" title="Link to this heading"></a></h1>
+<!-- Este archivo es solo para mostrar resultados del análisis, no debe aparecer como página principal en el menú de la documentación. -->
+<p><strong>Fuente:</strong> notebooks/00_EDA_Sheet1.ipynb</p>
+<section id="dimensiones-del-dataset">
+<h2>Dimensiones del Dataset<a class="headerlink" href="#dimensiones-del-dataset" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Filas: 209</p></li>
+<li><p>Columnas: 24</p></li>
+</ul>
+</section>
+<section id="valores-faltantes-por-columna">
+<h2>Valores Faltantes por Columna<a class="headerlink" href="#valores-faltantes-por-columna" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Columna</p></th>
+<th class="head"><p>Valores Faltantes</p></th>
+<th class="head"><p>Porcentaje (%)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RUT</p></td>
+<td><p>0</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>EMPRESA</p></td>
+<td><p>0</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-even"><td><p>COTIZA EN BOLSA</p></td>
+<td><p>0</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>EMP. FAMI</p></td>
+<td><p>0</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-even"><td><p>ANIO</p></td>
+<td><p>0</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD NETA</p></td>
+<td><p>1</p></td>
+<td><p>0.48</p></td>
+</tr>
+<tr class="row-even"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>4</p></td>
+<td><p>1.91</p></td>
+</tr>
+<tr class="row-odd"><td><p>PATRIMONIO</p></td>
+<td><p>5</p></td>
+<td><p>2.39</p></td>
+</tr>
+<tr class="row-even"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>15</p></td>
+<td><p>7.18</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>10</p></td>
+<td><p>4.78</p></td>
+</tr>
+<tr class="row-even"><td><p>ROA</p></td>
+<td><p>4</p></td>
+<td><p>1.91</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROE</p></td>
+<td><p>5</p></td>
+<td><p>2.39</p></td>
+</tr>
+<tr class="row-even"><td><p>EBDITA</p></td>
+<td><p>0</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>1</p></td>
+<td><p>0.48</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en Directorios</p></td>
+<td><p>1</p></td>
+<td><p>0.48</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>0</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en otros ejecutivos</p></td>
+<td><p>0</p></td>
+<td><p>0.00</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>40</p></td>
+<td><p>19.14</p></td>
+</tr>
+<tr class="row-even"><td><p>Activos total al inicio de anio</p></td>
+<td><p>39</p></td>
+<td><p>18.66</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas</p></td>
+<td><p>39</p></td>
+<td><p>18.66</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>38</p></td>
+<td><p>18.18</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar</p></td>
+<td><p>43</p></td>
+<td><p>20.57</p></td>
+</tr>
+<tr class="row-even"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>39</p></td>
+<td><p>18.66</p></td>
+</tr>
+<tr class="row-odd"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>46</p></td>
+<td><p>22.01</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="distribucion-de-valores-unicos-por-columna">
+<h2>Distribución de Valores Únicos por Columna<a class="headerlink" href="#distribucion-de-valores-unicos-por-columna" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Columna</p></th>
+<th class="head"><p>Valores Únicos</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>RUT</p></td>
+<td><p>19</p></td>
+</tr>
+<tr class="row-odd"><td><p>EMPRESA</p></td>
+<td><p>19</p></td>
+</tr>
+<tr class="row-even"><td><p>COTIZA EN BOLSA</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-odd"><td><p>EMP. FAMI</p></td>
+<td><p>1</p></td>
+</tr>
+<tr class="row-even"><td><p>ANIO</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD NETA</p></td>
+<td><p>204</p></td>
+</tr>
+<tr class="row-even"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>200</p></td>
+</tr>
+<tr class="row-odd"><td><p>PATRIMONIO</p></td>
+<td><p>198</p></td>
+</tr>
+<tr class="row-even"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>184</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>181</p></td>
+</tr>
+<tr class="row-even"><td><p>ROA</p></td>
+<td><p>203</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROE</p></td>
+<td><p>201</p></td>
+</tr>
+<tr class="row-even"><td><p>EBDITA</p></td>
+<td><p>194</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en Directorios</p></td>
+<td><p>13</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>7</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en otros ejecutivos</p></td>
+<td><p>28</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>168</p></td>
+</tr>
+<tr class="row-even"><td><p>Activos total al inicio de anio</p></td>
+<td><p>167</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas</p></td>
+<td><p>148</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>150</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar</p></td>
+<td><p>159</p></td>
+</tr>
+<tr class="row-even"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>160</p></td>
+</tr>
+<tr class="row-odd"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>152</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="analisis-detallado-de-variables-categoricas">
+<h2>Análisis Detallado de Variables Categóricas<a class="headerlink" href="#analisis-detallado-de-variables-categoricas" title="Link to this heading"></a></h2>
+<section id="distribucion-de-rut">
+<h3>Distribución de ‘RUT’<a class="headerlink" href="#distribucion-de-rut" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valor</p></th>
+<th class="head"><p>Frecuencia</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>76000957-1</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>76079669-7</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>78840880-3</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>96701340-4</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>77116500-1</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>86542100-1</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>96790240-3</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>79587210-8</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>76727040-2</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>96567040-8</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>77762940-9</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>78126110-6</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>89468900-5</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>94621000-5</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>85272800-0</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>85306000-3</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>76038806-8</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>78928380-K</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>61704000-K</p></td>
+<td><p>11</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="porcentajes-para-rut">
+<h3>Porcentajes para ‘RUT’<a class="headerlink" href="#porcentajes-para-rut" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valor</p></th>
+<th class="head"><p>Porcentaje (%)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>76000957-1</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>76079669-7</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>78840880-3</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>96701340-4</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>77116500-1</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>86542100-1</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>96790240-3</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>79587210-8</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>76727040-2</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>96567040-8</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>77762940-9</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>78126110-6</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>89468900-5</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>94621000-5</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>85272800-0</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>85306000-3</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>76038806-8</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>78928380-K</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>61704000-K</p></td>
+<td><p>5.26</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="distribucion-de-empresa">
+<h3>Distribución de ‘EMPRESA’<a class="headerlink" href="#distribucion-de-empresa" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valor</p></th>
+<th class="head"><p>Frecuencia</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ALGORTA NORTE S.A.</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINERA ANTUCOYA</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>SOCIEDAD CONTRACTUAL MINERA EL MORRO</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>SOCIEDAD CONTRACTUAL MINERA EL ABRA</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>NORTE ABIERTO SPA</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINERA SPENCE S.A.</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>MINERA LOS PELAMBRES</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINERA ESCONDIDA LIMITADA</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>MINERA CENTINELA</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA TECK QUEBRADA BLANCA S.A.</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>ANGLO AMERICAN SUR S.A. (EX MINERA SUR ANDES LTDA.)</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA TECK CARMEN DE ANDACOLLO</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>COMPAÑIA MINERA DOÑA INÉS DE COLLAHUASI SCM</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA CERRO COLORADO LTDA.</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>COMPAÑIA CONTRACTUAL MINERA CANDELARIA</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA NEVADA SPA</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>COMPAÑIA MINERA MARICUNGA S.A.</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA MANTOS DE ORO</p></td>
+<td><p>11</p></td>
+</tr>
+<tr class="row-even"><td><p>CODELCO</p></td>
+<td><p>11</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="porcentajes-para-empresa">
+<h3>Porcentajes para ‘EMPRESA’<a class="headerlink" href="#porcentajes-para-empresa" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valor</p></th>
+<th class="head"><p>Porcentaje (%)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ALGORTA NORTE S.A.</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINERA ANTUCOYA</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>SOCIEDAD CONTRACTUAL MINERA EL MORRO</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>SOCIEDAD CONTRACTUAL MINERA EL ABRA</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>NORTE ABIERTO SPA</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINERA SPENCE S.A.</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>MINERA LOS PELAMBRES</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>MINERA ESCONDIDA LIMITADA</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>MINERA CENTINELA</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA TECK QUEBRADA BLANCA S.A.</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>ANGLO AMERICAN SUR S.A. (EX MINERA SUR ANDES LTDA.)</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA TECK CARMEN DE ANDACOLLO</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>COMPAÑIA MINERA DOÑA INÉS DE COLLAHUASI SCM</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA CERRO COLORADO LTDA.</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>COMPAÑIA CONTRACTUAL MINERA CANDELARIA</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA NEVADA SPA</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>COMPAÑIA MINERA MARICUNGA S.A.</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-odd"><td><p>COMPAÑIA MINERA MANTOS DE ORO</p></td>
+<td><p>5.26</p></td>
+</tr>
+<tr class="row-even"><td><p>CODELCO</p></td>
+<td><p>5.26</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="distribucion-de-cotiza-en-bolsa">
+<h3>Distribución de ‘COTIZA EN BOLSA’<a class="headerlink" href="#distribucion-de-cotiza-en-bolsa" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valor</p></th>
+<th class="head"><p>Frecuencia</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NO</p></td>
+<td><p>209</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="porcentajes-para-cotiza-en-bolsa">
+<h3>Porcentajes para ‘COTIZA EN BOLSA’<a class="headerlink" href="#porcentajes-para-cotiza-en-bolsa" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valor</p></th>
+<th class="head"><p>Porcentaje (%)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NO</p></td>
+<td><p>100.00</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="distribucion-de-emp-fami">
+<h3>Distribución de ‘EMP. FAMI’<a class="headerlink" href="#distribucion-de-emp-fami" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valor</p></th>
+<th class="head"><p>Frecuencia</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NO</p></td>
+<td><p>209</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="porcentajes-para-emp-fami">
+<h3>Porcentajes para ‘EMP. FAMI’<a class="headerlink" href="#porcentajes-para-emp-fami" title="Link to this heading"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Valor</p></th>
+<th class="head"><p>Porcentaje (%)</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>NO</p></td>
+<td><p>100.00</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="estadisticas-descriptivas-de-variables-numericas">
+<h2>Estadísticas Descriptivas de Variables Numéricas<a class="headerlink" href="#estadisticas-descriptivas-de-variables-numericas" title="Link to this heading"></a></h2>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ANIO</p></td>
+<td><p>count</p></td>
+<td><p>209.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>ANIO</p></td>
+<td><p>mean</p></td>
+<td><p>2018.0</p></td>
+</tr>
+<tr class="row-even"><td><p>ANIO</p></td>
+<td><p>std</p></td>
+<td><p>3.1698701744830062</p></td>
+</tr>
+<tr class="row-odd"><td><p>ANIO</p></td>
+<td><p>min</p></td>
+<td><p>2013.0</p></td>
+</tr>
+<tr class="row-even"><td><p>ANIO</p></td>
+<td><p>25%</p></td>
+<td><p>2015.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>ANIO</p></td>
+<td><p>50%</p></td>
+<td><p>2018.0</p></td>
+</tr>
+<tr class="row-even"><td><p>ANIO</p></td>
+<td><p>75%</p></td>
+<td><p>2021.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>ANIO</p></td>
+<td><p>max</p></td>
+<td><p>2023.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UTILIDAD NETA</p></td>
+<td><p>count</p></td>
+<td><p>208.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD NETA</p></td>
+<td><p>mean</p></td>
+<td><p>312689136.38461536</p></td>
+</tr>
+<tr class="row-even"><td><p>UTILIDAD NETA</p></td>
+<td><p>std</p></td>
+<td><p>804243691.9754058</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD NETA</p></td>
+<td><p>min</p></td>
+<td><p>-2191000000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>UTILIDAD NETA</p></td>
+<td><p>25%</p></td>
+<td><p>-13977500.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD NETA</p></td>
+<td><p>50%</p></td>
+<td><p>32803281.0</p></td>
+</tr>
+<tr class="row-even"><td><p>UTILIDAD NETA</p></td>
+<td><p>75%</p></td>
+<td><p>346071903.75</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD NETA</p></td>
+<td><p>max</p></td>
+<td><p>3889000000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>count</p></td>
+<td><p>205.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>mean</p></td>
+<td><p>4992521830.858537</p></td>
+</tr>
+<tr class="row-even"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>std</p></td>
+<td><p>8834837205.18558</p></td>
+</tr>
+<tr class="row-odd"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>min</p></td>
+<td><p>99508000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>25%</p></td>
+<td><p>555722458.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>50%</p></td>
+<td><p>1744904000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>75%</p></td>
+<td><p>5446000000.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>TOTAL ACTIVOS</p></td>
+<td><p>max</p></td>
+<td><p>45166000000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>PATRIMONIO</p></td>
+<td><p>count</p></td>
+<td><p>204.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>PATRIMONIO</p></td>
+<td><p>mean</p></td>
+<td><p>2216568090.3186274</p></td>
+</tr>
+<tr class="row-even"><td><p>PATRIMONIO</p></td>
+<td><p>std</p></td>
+<td><p>3397747971.962991</p></td>
+</tr>
+<tr class="row-odd"><td><p>PATRIMONIO</p></td>
+<td><p>min</p></td>
+<td><p>-2732002000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>PATRIMONIO</p></td>
+<td><p>25%</p></td>
+<td><p>103420250.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>PATRIMONIO</p></td>
+<td><p>50%</p></td>
+<td><p>709765640.0</p></td>
+</tr>
+<tr class="row-even"><td><p>PATRIMONIO</p></td>
+<td><p>75%</p></td>
+<td><p>3257718423.25</p></td>
+</tr>
+<tr class="row-odd"><td><p>PATRIMONIO</p></td>
+<td><p>max</p></td>
+<td><p>13758000000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>count</p></td>
+<td><p>194.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>mean</p></td>
+<td><p>545035061.5618557</p></td>
+</tr>
+<tr class="row-even"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>std</p></td>
+<td><p>1096097874.9559548</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>min</p></td>
+<td><p>-523643000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>25%</p></td>
+<td><p>-4271486.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>50%</p></td>
+<td><p>89515117.0</p></td>
+</tr>
+<tr class="row-even"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>75%</p></td>
+<td><p>622250000.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>UTILIDAD OPERACIONAL</p></td>
+<td><p>max</p></td>
+<td><p>6547000000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>count</p></td>
+<td><p>199.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>mean</p></td>
+<td><p>329179682.7085427</p></td>
+</tr>
+<tr class="row-even"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>std</p></td>
+<td><p>673957351.5514902</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>min</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>25%</p></td>
+<td><p>15060000.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>50%</p></td>
+<td><p>81073698.0</p></td>
+</tr>
+<tr class="row-even"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>75%</p></td>
+<td><p>312178500.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>DEPRECIACIÓN Y AMORTIZACIÓN</p></td>
+<td><p>max</p></td>
+<td><p>3832000000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ROA</p></td>
+<td><p>count</p></td>
+<td><p>205.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROA</p></td>
+<td><p>mean</p></td>
+<td><p>0.18984517898359365</p></td>
+</tr>
+<tr class="row-even"><td><p>ROA</p></td>
+<td><p>std</p></td>
+<td><p>20.282810676888854</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROA</p></td>
+<td><p>min</p></td>
+<td><p>-114.93010403120935</p></td>
+</tr>
+<tr class="row-even"><td><p>ROA</p></td>
+<td><p>25%</p></td>
+<td><p>-2.2418642347871027</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROA</p></td>
+<td><p>50%</p></td>
+<td><p>2.0124940238934634</p></td>
+</tr>
+<tr class="row-even"><td><p>ROA</p></td>
+<td><p>75%</p></td>
+<td><p>8.821954859181098</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROA</p></td>
+<td><p>max</p></td>
+<td><p>47.6684361220327</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>ROE</p></td>
+<td><p>count</p></td>
+<td><p>204.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROE</p></td>
+<td><p>mean</p></td>
+<td><p>-0.8879720677076369</p></td>
+</tr>
+<tr class="row-even"><td><p>ROE</p></td>
+<td><p>std</p></td>
+<td><p>132.94914714768782</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROE</p></td>
+<td><p>min</p></td>
+<td><p>-1385.5102377807134</p></td>
+</tr>
+<tr class="row-even"><td><p>ROE</p></td>
+<td><p>25%</p></td>
+<td><p>-0.5638293315274184</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROE</p></td>
+<td><p>50%</p></td>
+<td><p>8.977900231815582</p></td>
+</tr>
+<tr class="row-even"><td><p>ROE</p></td>
+<td><p>75%</p></td>
+<td><p>21.89047856041529</p></td>
+</tr>
+<tr class="row-odd"><td><p>ROE</p></td>
+<td><p>max</p></td>
+<td><p>349.541640770665</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>EBDITA</p></td>
+<td><p>count</p></td>
+<td><p>209.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>EBDITA</p></td>
+<td><p>mean</p></td>
+<td><p>819347171.3014354</p></td>
+</tr>
+<tr class="row-even"><td><p>EBDITA</p></td>
+<td><p>std</p></td>
+<td><p>1535932159.5854762</p></td>
+</tr>
+<tr class="row-odd"><td><p>EBDITA</p></td>
+<td><p>min</p></td>
+<td><p>-519307000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>EBDITA</p></td>
+<td><p>25%</p></td>
+<td><p>331900.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>EBDITA</p></td>
+<td><p>50%</p></td>
+<td><p>123265297.0</p></td>
+</tr>
+<tr class="row-even"><td><p>EBDITA</p></td>
+<td><p>75%</p></td>
+<td><p>941563000.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>EBDITA</p></td>
+<td><p>max</p></td>
+<td><p>10379000000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>count</p></td>
+<td><p>208.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>mean</p></td>
+<td><p>1.0625</p></td>
+</tr>
+<tr class="row-even"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>std</p></td>
+<td><p>1.171702382616828</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>min</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>25%</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>50%</p></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>75%</p></td>
+<td><p>2.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en Directorios (incluye suplentes)</p></td>
+<td><p>max</p></td>
+<td><p>6.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Total en Directorios</p></td>
+<td><p>count</p></td>
+<td><p>208.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en Directorios</p></td>
+<td><p>mean</p></td>
+<td><p>7.1923076923076925</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en Directorios</p></td>
+<td><p>std</p></td>
+<td><p>5.008354224706333</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en Directorios</p></td>
+<td><p>min</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en Directorios</p></td>
+<td><p>25%</p></td>
+<td><p>6.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en Directorios</p></td>
+<td><p>50%</p></td>
+<td><p>7.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en Directorios</p></td>
+<td><p>75%</p></td>
+<td><p>10.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en Directorios</p></td>
+<td><p>max</p></td>
+<td><p>22.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>count</p></td>
+<td><p>209.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>mean</p></td>
+<td><p>0.8133971291866029</p></td>
+</tr>
+<tr class="row-even"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>std</p></td>
+<td><p>1.255224635194598</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>min</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>25%</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>50%</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>75%</p></td>
+<td><p>1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cantidad de mujeres en otros ejecutivos</p></td>
+<td><p>max</p></td>
+<td><p>6.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Total en otros ejecutivos</p></td>
+<td><p>count</p></td>
+<td><p>209.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en otros ejecutivos</p></td>
+<td><p>mean</p></td>
+<td><p>8.564593301435407</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en otros ejecutivos</p></td>
+<td><p>std</p></td>
+<td><p>6.249376119027426</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en otros ejecutivos</p></td>
+<td><p>min</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en otros ejecutivos</p></td>
+<td><p>25%</p></td>
+<td><p>4.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en otros ejecutivos</p></td>
+<td><p>50%</p></td>
+<td><p>8.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Total en otros ejecutivos</p></td>
+<td><p>75%</p></td>
+<td><p>11.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Total en otros ejecutivos</p></td>
+<td><p>max</p></td>
+<td><p>33.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>count</p></td>
+<td><p>169.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>mean</p></td>
+<td><p>802994007.5325444</p></td>
+</tr>
+<tr class="row-even"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>std</p></td>
+<td><p>1442149596.685775</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>min</p></td>
+<td><p>-173458000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>25%</p></td>
+<td><p>6217846.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>50%</p></td>
+<td><p>131145000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>75%</p></td>
+<td><p>1111900000.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flujo efectivo de operación (CFO)</p></td>
+<td><p>max</p></td>
+<td><p>8301000000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Activos total al inicio de anio</p></td>
+<td><p>count</p></td>
+<td><p>170.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Activos total al inicio de anio</p></td>
+<td><p>mean</p></td>
+<td><p>5055568690.42353</p></td>
+</tr>
+<tr class="row-even"><td><p>Activos total al inicio de anio</p></td>
+<td><p>std</p></td>
+<td><p>9293409761.88952</p></td>
+</tr>
+<tr class="row-odd"><td><p>Activos total al inicio de anio</p></td>
+<td><p>min</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Activos total al inicio de anio</p></td>
+<td><p>25%</p></td>
+<td><p>371518203.75</p></td>
+</tr>
+<tr class="row-odd"><td><p>Activos total al inicio de anio</p></td>
+<td><p>50%</p></td>
+<td><p>1600594319.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Activos total al inicio de anio</p></td>
+<td><p>75%</p></td>
+<td><p>5388500000.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Activos total al inicio de anio</p></td>
+<td><p>max</p></td>
+<td><p>45166000000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ventas</p></td>
+<td><p>count</p></td>
+<td><p>170.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas</p></td>
+<td><p>mean</p></td>
+<td><p>1411065475.4882352</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas</p></td>
+<td><p>std</p></td>
+<td><p>2318651548.726728</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas</p></td>
+<td><p>min</p></td>
+<td><p>-4769165.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas</p></td>
+<td><p>25%</p></td>
+<td><p>1221475.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas</p></td>
+<td><p>50%</p></td>
+<td><p>389530790.5</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas</p></td>
+<td><p>75%</p></td>
+<td><p>2286647598.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas</p></td>
+<td><p>max</p></td>
+<td><p>10631000000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>count</p></td>
+<td><p>171.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>mean</p></td>
+<td><p>-14055431.157894736</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>std</p></td>
+<td><p>982114957.9369826</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>min</p></td>
+<td><p>-8839127000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>25%</p></td>
+<td><p>-47385000.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>50%</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>75%</p></td>
+<td><p>51991497.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Ventas del anio (diferencia)</p></td>
+<td><p>max</p></td>
+<td><p>5231138000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cuentas por cobrar</p></td>
+<td><p>count</p></td>
+<td><p>166.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar</p></td>
+<td><p>mean</p></td>
+<td><p>329312553.7289157</p></td>
+</tr>
+<tr class="row-even"><td><p>Cuentas por cobrar</p></td>
+<td><p>std</p></td>
+<td><p>630398857.2595217</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar</p></td>
+<td><p>min</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Cuentas por cobrar</p></td>
+<td><p>25%</p></td>
+<td><p>15306750.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar</p></td>
+<td><p>50%</p></td>
+<td><p>78281645.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Cuentas por cobrar</p></td>
+<td><p>75%</p></td>
+<td><p>405917258.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar</p></td>
+<td><p>max</p></td>
+<td><p>4194350000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>count</p></td>
+<td><p>170.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>mean</p></td>
+<td><p>-13612921.188235294</p></td>
+</tr>
+<tr class="row-even"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>std</p></td>
+<td><p>364356875.44945675</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>min</p></td>
+<td><p>-4194350000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>25%</p></td>
+<td><p>-18907396.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>50%</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>75%</p></td>
+<td><p>24407990.5</p></td>
+</tr>
+<tr class="row-odd"><td><p>Cuentas por cobrar (diferencia)</p></td>
+<td><p>max</p></td>
+<td><p>945033000.0</p></td>
+</tr>
+</tbody>
+</table>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Variable</p></th>
+<th class="head"><p>Estadístico</p></th>
+<th class="head"><p>Valor</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>count</p></td>
+<td><p>163.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>mean</p></td>
+<td><p>3438723112.5153375</p></td>
+</tr>
+<tr class="row-even"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>std</p></td>
+<td><p>6313524590.891139</p></td>
+</tr>
+<tr class="row-odd"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>min</p></td>
+<td><p>0.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>25%</p></td>
+<td><p>260090500.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>50%</p></td>
+<td><p>692968000.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>75%</p></td>
+<td><p>3937703771.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Propiedades, planta y equipo (PPE)</p></td>
+<td><p>max</p></td>
+<td><p>30449893000.0</p></td>
+</tr>
+</tbody>
+</table>
+<p><em>Generado automáticamente desde el notebook.</em></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to project kotari_gender_data_analysis’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="note_01_EDA_Sheet2.html" class="btn btn-neutral float-right" title="Resultados del Análisis Exploratorio de Datos (EDA) - Hoja ‘LISTADO EMPRESA’" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright .</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
